@@ -39,44 +39,44 @@ class System {
         this.moneyPerSecond = 0
 
         setInterval(() => {
-            this.money = this.money + this.moneyPerSecond
+            this.money = this.money + this.moneyPerSecond;
             this.elements.money.innerText = `kotorizotalira: ${this.money}🍗`;
         }, 1000);
     }
 
     addMoneyOnClick(){
-        this.money = this.money + this.moneyPerClick
+        this.money = this.money + this.moneyPerClick;
         this.elements.money.innerText = `kotorizotalira: ${this.money}🍗`;
     }
 
     addPerClickMoney(button){
-        let thisButton = this.buttons.filter(x => x.id == button)[0]
+        let thisButton = this.buttons.filter(x => x.id == button)[0];
         if(thisButton.type != 'perClick') return;
-        if(this.money < thisButton.upgradeMoney) return alert('You dont have enough money.')
-        this.money = this.money - thisButton.upgradeMoney
-        this.moneyPerClick = this.moneyPerClick + thisButton.addPerClickSum
+        if(this.money < thisButton.upgradeMoney) return alert('You dont have enough money.');
+        this.money = this.money - thisButton.upgradeMoney;
+        this.moneyPerClick = this.moneyPerClick + thisButton.addPerClickSum;
         this.elements.money.innerText = `kotorizotalira: ${this.money}🍗`;
     }
 
     addPerSecondMoney(button){
-        let thisButton = this.buttons.filter(x => x.id == button)[0]
+        let thisButton = this.buttons.filter(x => x.id == button)[0];
         if(thisButton.type != 'perSecond') return;
-        if(this.money < thisButton.upgradeMoney) return alert('You dont have enough money.')
-        this.money = this.money - thisButton.upgradeMoney
-        this.moneyPerSecond = this.moneyPerSecond + thisButton.addPerSecondSum
+        if(this.money < thisButton.upgradeMoney) return alert('You dont have enough money.');
+        this.money = this.money - thisButton.upgradeMoney;
+        this.moneyPerSecond = this.moneyPerSecond + thisButton.addPerSecondSum;
         this.elements.money.innerText = `kotorizotalira: ${this.money}🍗`;
     }
 
     refreshMoney(){
-        this.money = 0
+        this.money = 0;
         this.elements.money.innerText = `kotorizotalira: ${this.money}🍗`;
     }
-    
+
     refreshAll(){
         this.money = 0
         this.elements.money.innerText = `kotorizotalira: ${this.money}🍗`;
-        this.moneyPerClick = 1
-        this.moneyPerSecond = 0
+        this.moneyPerClick = 1;
+        this.moneyPerSecond = 0;
     }
 
 }
