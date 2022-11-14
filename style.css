@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(29, 29, 31);
+}
+
+#money {
+    color: white;
+}
+
+* {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }

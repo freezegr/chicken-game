@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clicker game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 id="money">kotorizotalira: 0🍗</h2>
+    <img id="chicken" src="assests/chicken.png" onclick="system.addMoneyOnClick()" width="200" height="200" draggable="false">
+    <button id="firstButton" onclick="system.addPerClickMoney('first')">add 1 (10🍗)</button>
+    <button id="SecondButton" onclick="system.addPerClickMoney('second')">add 2 (15🍗)</button>
+    <button id="third" onclick="system.addPerSecondMoney('third')">add 1/s (50🍗)</button>
+    <button id="third" onclick="system.addPerSecondMoney('4th')">add 2/s (75🍗)</button>
+
+    <script src="System.js"></script>
+    <script>
+        const system = new System();
+    </script>
+</body>
+</html>
