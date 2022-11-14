@@ -71,9 +71,12 @@ class System {
         this.money = 0
         this.elements.money.innerText = `kotorizotalira: ${this.money}🍗`;
     }
-
+    
     refreshAll(){
-        //edo na mou 8umiso na kano refresh ta panta opos moneypersec kai money perclick
+        this.money = 0
+        this.elements.money.innerText = `kotorizotalira: ${this.money}🍗`;
+        this.moneyPerClick = 1
+        this.moneyPerSecond = 0
     }
 
 }
